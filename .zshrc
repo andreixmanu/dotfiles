@@ -9,7 +9,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="cypher"
+# ZSH_THEME="cypher"
+# ZSH_THEME="candy"
+ZSH_THEME="intheloop"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -42,7 +44,7 @@ ZSH_THEME="cypher"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -98,11 +100,19 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="nvim ~/dotfiles/.zshrc"
 alias e="exit"
 alias sync="onedrive --synchronize --single-directory 'Obsidian/Athena'"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# neofetch
-nerdfetch -c
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias up="sudo pacman -Syu"
+alias n="nvim"
+alias install="sudo pacman -S"
+
+echo ""
+neofetch
+#nerdfetch -c
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(fzf --zsh)"
+
+export PATH=$PATH:/home/andreixmanu/.spicetify

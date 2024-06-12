@@ -1,0 +1,152 @@
+{
+  "layer": "top",
+  "height": 30,
+  "spacing": 4,
+  "padding-top": 4,
+  "modules-left": [
+    "custom/arch",
+    "cpu",
+    "memory",
+    "temperature",
+    "tray",
+    // "custom/window-name",
+    "hyprland/workspaces",
+  ],
+
+  "modules-center": ["clock"],
+  "modules-right": [
+    "custom/pacman-update",
+    // "backlight",
+    "custom/kb-layout",
+    "custom/notifications",
+    "battery",
+    "pulseaudio",
+    "network",
+    "custom/airplane",
+    "custom/powermenu"
+  ],
+  "hyprland/workspaces": {
+    "format": "{name}:{icon}",
+    "on-click": "activate",
+    "all-outputs": false,
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "",
+    },
+  },
+  "tray": {
+    "icon-size": 30,
+    "spacing": 10
+  },
+  "custom/kb-layout": {
+    "format": "󰌌 {}",
+    "interval": 5,
+    "exec": "$HOME/.config/.scripts/kb_layout.sh",
+  },
+  "clock": {
+    "format": "<b>{:%a, %d %b %Y • %R}</b>",
+    "interval": 5,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "on-click": "gnome-calendar"
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "max-length": 10,
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {used}GiB",
+    "max-length": 10
+  },
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{icon} {percent}%",
+    "tooltip": false,
+    "format-icons": ["", ""]
+  },
+  "network": {
+    "format-wifi": " {essid}",
+    "format-ethernet": " wired",
+    "format-disconnected": " disconnected",
+	"tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz",
+    "on-click": "gnome-control-center wifi"
+  },
+  "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "婢",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click-right": "pavucontrol",
+	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+	"format": "{icon} {capacity}%",
+      "format-charging": "󱐋 {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-alt": "{icon} {capacity}%",
+      "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""],
+      "max-length": 25,
+      "tooltip": false
+  },
+  "custom/separator": {
+    "format": " "
+  },
+  "custom/notifications": { "format": "{}",
+    "interval": 5,
+    "tooltip": true,
+    "return-type": "json",
+    "exec": "",
+    "exec-if": "[[ $(dunstctl count history) != 0 ]]",
+    "on-click": "dunstctl set-paused toggle"
+  },
+  "custom/window-name": {
+    "format": "<b>{}</b>",
+    "interval": 1,
+    "exec": "hyprctl activewindow | grep class | awk '{print $2}'"
+  },
+  "custom/pacman-update": {
+    "format": " {} update(s)",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "signal": 8,
+    "on-click": "alacritty -e pacman -Syu && notify-send 'The system has been updated' ",
+    "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]"
+  },
+  "custom/arch": {
+    "format": "󰣇 "
+  },
+  "temperature": {
+    "thermal-zone": 0,
+    "critical-threshold": 80,
+    "format": "󰈸 {temperatureC}°C"
+  },
+  "custom/wrap-left": {
+    "format": "<b>[</b>"
+  },
+
+  "custom/wrap-right": {
+    "format": "<b>]</b>"
+  },
+  "custom/powermenu": {
+     "format": "",
+     "on-click": "bash ~/.config/.scripts/powermenu/powermenu.sh",
+     "tooltip": false
+  },
+}
