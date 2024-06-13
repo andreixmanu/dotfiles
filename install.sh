@@ -64,8 +64,8 @@ else
 fi
 
 # create an array of package names
-packages_basic=(neovim tmux zsh curl stow rust neofetch btop kitty alacritty)
-packages_hypr=(neovim tmux zsh curl stow rust neofetch btop alacritty kitty hypr rofi waybar)
+packages_basic=(neovim tmux zsh curl stow rust neofetch curl btop kitty alacritty)
+packages_hypr=(neovim tmux zsh curl stow rust neofetch curl btop alacritty kitty hypr rofi waybar)
 
 echo "Are you using Hyperland desktop environment? (Y/n)"
 read -r response
@@ -115,3 +115,27 @@ stow --adopt .
 
 echo "Created symlinks between the dotfiles and the .config directory"
 echo "Every time you make changes to the dotfiles, you can run the 'stow --adopt .' command in the dotfiles directory to update the symlinks"
+
+# remove the symlink to the installation file
+cd "$HOME"
+rm install.sh
+
+# check if bash is the default shell and change it to zsh
+if [ "$SHELL" == "/bin/bash" ]; then
+
+  # ask the user if they want to change the default shell to zsh
+  echo "Do you want to change the default shell to zsh and install oh-my-zsh? (Y/n)"
+  read -r response2
+  if [ "$response2" == "n" -o "$response2" == "N" ]; then
+    echo "My job here is done!"
+    exit 1
+  fi
+  echo "Changing the default shell to zsh"
+  chsh -s /bin/zsh
+  # install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+fi
+
+echo "For the shell changes to take effect, you need to log out and log back in"
+echo "My job here is done!"
