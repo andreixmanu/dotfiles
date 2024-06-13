@@ -45,9 +45,26 @@ if [ -f /etc/os-release ]; then
   # echo "Distro: $distro"
 fi
 
+#  update the system
+if [ "$distro" == "arch" ]; then
+  echo "Updating the system"
+  sleep 1
+  sudo pacman -Syu --noconfirm
+fi
+else if [ "$distro" == "debian" -o "$distro" == "ubuntu"]; then
+  echo "Updating the system"
+  sleep 1
+  sudo apt update && sudo apt upgrade -y
+fi
+else if [ "$distro" == "fedora" ]; then
+  echo "Updating the system"
+  sleep 1
+  sudo dnf update -y
+fi
+
 # create an array of package names
-packages_basic=(git neovim tmux zsh curl stow wget unzip rust neofetch btop kitty alacritty)
-packages_hypr=(git neovim tmux zsh curl stow wget unzip rust neofetch btop alacritty kitty hypr rofi waybar)
+packages_basic=(neovim tmux zsh curl stow rust neofetch btop kitty alacritty)
+packages_hypr=(neovim tmux zsh curl stow rust neofetch btop alacritty kitty hypr rofi waybar)
 
 echo "Are you using Hyperland desktop environment? (Y/n)"
 read -r response
@@ -65,6 +82,8 @@ else
 
   echo "Installing packages for Hyperland"
   packages=("${packages_hypr[@]}")
+  sleep 1
+  sudo pacman -S --noconfirm --needed "${packages[@]}"
 
 fi
 
@@ -87,10 +106,11 @@ if [ "$response" == "n" -o "$response" == "N" ]; then
   rm -rf "$HOME/dotfiles/waybar-bak"
 fi
 
+echo ""
+
 # create symlinks between the dotfiles and the .config directory
 cd "$HOME/dotfiles"
 stow --adopt .
 
 echo "Created symlinks between the dotfiles and the .config directory"
 echo "Every time you make changes to the dotfiles, you can run the 'stow --adopt .' command in the dotfiles directory to update the symlinks"
-

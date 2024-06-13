@@ -11,11 +11,11 @@ sudo dnf install git # for fedora based
 
 2. *Inside your home folder* clone the repo
 ```shell
-git clone https://github.com/andreixmanu/dotfiles . && cd dotfiles
+git clone https://github.com/andreixmanu/dotfiles && cd dotfiles
 ```
 This will create a folder in your home directory called 'dotfiles'.
 
-3. Grant the installation script the execution permission.
+3. Make sure the installation script has the execution permission.
 ```shell
 chmod +x install.sh
 ```
