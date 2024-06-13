@@ -50,16 +50,17 @@ if [ "$distro" == "arch" ]; then
   echo "Updating the system"
   sleep 1
   sudo pacman -Syu --noconfirm
-fi
-else if [ "$distro" == "debian" -o "$distro" == "ubuntu"]; then
+elif [ "$distro" == "debian" -o "$distro" == "ubuntu"]; then
   echo "Updating the system"
   sleep 1
   sudo apt update && sudo apt upgrade -y
-fi
-else if [ "$distro" == "fedora" ]; then
+elif [ "$distro" == "fedora" ]; then
   echo "Updating the system"
   sleep 1
   sudo dnf update -y
+else
+  echo "Unsupported distro"
+  exit 1
 fi
 
 # create an array of package names
