@@ -70,22 +70,34 @@ packages_hypr=(neovim tmux zsh curl stow rust neofetch curl btop alacritty kitty
 echo "Are you using Hyperland desktop environment? (Y/n)"
 read -r response
 
-if [ "$response" == "n" -o "$response" == "N" ]; then
-
-  echo "Installing basic packages for $distro_name"
-  packages=("${packages_basic[@]}")
-
-  sleep 1 
-  
-  sudo pacman -S --noconfirm --needed "${packages[@]}"
-
-else
-
-  echo "Installing packages for Hyperland"
-  packages=("${packages_hypr[@]}")
+# install the necessary packages based on the user's distro
+if [ "$distro" == "arch" ]; then
+  echo "Installing the necessary packages for the development environment"
   sleep 1
-  sudo pacman -S --noconfirm --needed "${packages[@]}"
-
+  if [ "$response" == "n" -o "$response" == "N" ]; then
+    sudo pacman -S "${packages_basic[@]}" --noconfirm
+  else
+    sudo pacman -S "${packages_hypr[@]}" --noconfirm
+  fi
+elif [ "$distro" == "debian" -o "$distro" == "ubuntu" ]; then
+  echo "Installing the necessary packages for the development environment"
+  sleep 1
+  if [ "$response" == "n" -o "$response" == "N" ]; then
+    sudo apt install "${packages_basic[@]}" -y
+  else
+    sudo apt install "${packages_hypr[@]}" -y
+  fi
+elif [ "$distro" == "fedora" ]; then
+  echo "Installing the necessary packages for the development environment"
+  sleep 1
+  if [ "$response" == "n" -o "$response" == "N" ]; then
+    sudo dnf install "${packages_basic[@]}" -y
+  else
+    sudo dnf install "${packages_hypr[@]}" -y
+  fi
+else
+  echo "Unsupported distro"
+  exit 1
 fi
 
 # create a backup of the existing dotfiles in the .config directory
@@ -139,3 +151,8 @@ fi
 
 echo "For the shell changes to take effect, you need to log out and log back in"
 echo "My job here is done!"
+
+# TODO add installation of the necessary fonts
+# TODO customize package installations for different distros
+# TODO add git submodules 
+# TODO add colors to the output

@@ -26,6 +26,12 @@ chmod +x install.sh
 
 ## General Information
 
+### Currently supported distros:
+- Arch 
+- Debian
+- Fedora
+- Ubuntu
+
 ### List of tools:
 
 - [Alacritty](https://alacritty.org/) : standard terminal
