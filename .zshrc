@@ -104,15 +104,18 @@ alias zshconfig="nvim ~/dotfiles/.zshrc"
 alias e="exit"
 alias sync="onedrive --synchronize --single-directory 'Obsidian/Athena'"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias up="sudo pacman -Syu"
+alias sium="sudo pacman -Syu"
 alias n="nvim"
 alias install="sudo pacman -S"
-
-echo ""
-neofetch
+alias docker login="sudo docker login"
+# neofetch
 #nerdfetch -c
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(fzf --zsh)"
 
 export PATH=$PATH:/home/andreixmanu/.spicetify
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

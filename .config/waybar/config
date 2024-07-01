@@ -32,8 +32,8 @@
     "format-icons": {
       "urgent": "",
       "active": "",
-      "default": "",
-    },
+      "default": ""
+    }
   },
   "tray": {
     "icon-size": 30,
@@ -42,7 +42,7 @@
   "custom/kb-layout": {
     "format": "󰌌 {}",
     "interval": 5,
-    "exec": "$HOME/.config/.scripts/kb_layout.sh",
+    "exec": "$HOME/.config/.scripts/kb_layout.sh"
   },
   "clock": {
     "format": "<b>{:%a, %d %b %Y • %R}</b>",
@@ -71,7 +71,7 @@
     "format-wifi": " {essid}",
     "format-ethernet": " wired",
     "format-disconnected": " disconnected",
-	"tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz",
+	  "tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz",
     "on-click": "gnome-control-center wifi"
   },
   "pulseaudio": {

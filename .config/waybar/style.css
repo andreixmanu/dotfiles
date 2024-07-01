@@ -51,15 +51,15 @@
   }
   
   #cpu {
-    background-color: #fe3c44;
+    background-color: #f38ba8;
   }
   
   #memory {
-    background-color: #FE5D40;
+    background-color: #fab387;
   }
   
   #temperature {
-    background-color: #FD8343;
+    background-color: #f9e2af;
   }
   
   #custom-powermenu {
@@ -109,7 +109,7 @@
   }
   
   #backlight {
-    background-color: #B5B16D;
+    background-color: #f9e2af;
   }
   
   #custom-kb-layout {
@@ -117,11 +117,11 @@
   }
   
   #battery {
-    background-color: #68B398;
+    background-color: #a6e3a1;
   }
   
   #pulseaudio {
-    background-color: #2DB4B9;
+    background-color: #89dceb;
   }
   
   #custom-right-arr {
@@ -129,7 +129,7 @@
   }
   
   #network {
-    background-color: #21b2cb;
+    background-color: #89b4fa;
   }
   
   #clock {
