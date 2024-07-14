@@ -7,12 +7,13 @@ import = [
 [font]
 #normal = { family = "JetBrainsMono Nerd Font", style = "Regular"}
 normal = { family = "SF Mono", style = "Regular"}
-size = 13
+size = 14
 
 [window]
 decorations = "None"
 opacity = 0.97
 dimensions = { columns = 150, lines = 40}
+blur = true
 [env]
 TERM = "xterm-256color"
 

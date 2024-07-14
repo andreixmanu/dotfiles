@@ -110,12 +110,16 @@ alias install="sudo pacman -S"
 alias docker login="sudo docker login"
 # neofetch
 #nerdfetch -c
-
+# tmux attach
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(fzf --zsh)"
 
 export PATH=$PATH:/home/andreixmanu/.spicetify
 
 
+# Set up fzf
+source <(fzf --zsh)
+
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+export PATH=$HOME/.local/bin:$PATH
