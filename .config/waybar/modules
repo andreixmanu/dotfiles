@@ -470,7 +470,7 @@
 },
 "network": {
 	"format": "{ifname}",
-	"format-wifi": "{icon}",
+	"format-wifi": "{icon} {essid}",
 	"format-ethernet": "󰌘",
 	"format-disconnected": "󰌙",
 	"tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
@@ -482,7 +482,7 @@
 	"format-icons": [
 		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
 	],
-	"on-click-right": "kitty nmtui"
+	"on-click-right": "alacritty nmtui"
 },
 "network#speed": {
 	"interval": 1,
