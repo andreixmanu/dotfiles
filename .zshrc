@@ -1,8 +1,11 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/andreixmanu/.zsh/completions:"* ]]; then export FPATH="/home/andreixmanu/.zsh/completions:$FPATH"; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -11,7 +14,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="cypher"
 # ZSH_THEME="candy"
-ZSH_THEME="intheloop"
+# ZSH_THEME="intheloop"
+
+# oh-my-posh theme 
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,7 +81,7 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -104,7 +110,7 @@ alias zshconfig="nvim ~/dotfiles/.zshrc"
 alias e="exit"
 alias sync="onedrive --synchronize --single-directory 'Obsidian/Athena'"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias sium="sudo pacman -Syu"
+alias sium="sudo pacman -Syu && yay -Syu"
 alias n="nvim"
 alias install="sudo pacman -S"
 alias docker login="sudo docker login"
@@ -113,13 +119,22 @@ alias docker login="sudo docker login"
 # tmux attach
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(fzf --zsh)"
-
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/half-life.omp.json)"
 export PATH=$PATH:/home/andreixmanu/.spicetify
-
+export PATH="$HOME/.deno/bin:$PATH"
+export ANDROID_HOME=$HOME/Android/Sdk
 
 # Set up fzf
 source <(fzf --zsh)
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)
 export PATH=$HOME/.local/bin:$PATH
+
+# bun completions
+[ -s "/home/andreixmanu/.bun/_bun" ] && source "/home/andreixmanu/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+. "/home/andreixmanu/.deno/env"

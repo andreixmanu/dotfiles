@@ -10,3 +10,9 @@
 
 2024/06/02 (10:06:22) | ===> btop++ v.1.2.13
 2024/06/02 (10:06:22) | WARNING: Failed to set locale en_US.UTF-8 continuing anyway.
+
+2024/10/22 (16:19:05) | ===> btop++ v.1.4.0
+2024/10/22 (16:19:05) | WARNING: Intel GPU: Failed to initialize PMU
+
+2024/11/05 (10:56:33) | ===> btop++ v.1.4.0
+2024/11/05 (10:56:33) | WARNING: Intel GPU: Failed to initialize PMU
