@@ -1,5 +1,6 @@
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":/home/andreixmanu/.zsh/completions:"* ]]; then export FPATH="/home/andreixmanu/.zsh/completions:$FPATH"; fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -115,14 +116,18 @@ alias n="nvim"
 alias install="sudo pacman -S"
 alias docker login="sudo docker login"
 # neofetch
-#nerdfetch -c
+# nerdfetch -c
 # tmux attach
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(fzf --zsh)"
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/half-life.omp.json)"
+#eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/half-life.omp.json)"
+eval "$(starship init zsh)"
+
 export PATH=$PATH:/home/andreixmanu/.spicetify
 export PATH="$HOME/.deno/bin:$PATH"
 export ANDROID_HOME=$HOME/Android/Sdk
+# export STARSHIP_CONFIG=/home/andreixmanu/.config/starship/starship.toml
 
 # Set up fzf
 source <(fzf --zsh)
