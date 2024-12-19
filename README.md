@@ -4,14 +4,14 @@
 
 1. Install git on your sistem
 ```shell
-sudo pacman -S git # for arch based
-sudo apt install git # for debian based
-sudo dnf install git # for fedora based 
+sudo pacman -S git      # for arch based
+sudo apt install git    # for debian based
+sudo dnf install git    # for fedora based 
 ```
 
 2. *Inside your home folder* clone the repo
 ```shell
-git clone https://github.com/andreixmanu/dotfiles && cd dotfiles
+cd && git clone https://github.com/andreixmanu/dotfiles && cd dotfiles
 ```
 This will create a folder in your home directory called 'dotfiles'.
 
@@ -28,14 +28,11 @@ chmod +x install.sh
 
 ### Currently supported distros:
 - Arch 
-- Debian
-- Fedora
-- Ubuntu
 
 ### List of tools:
 
-- [Alacritty](https://alacritty.org/) : standard terminal
-- [Kitty](https://sw.kovidgoyal.net/kitty/) : hyperland terminal
+- [Alacritty](https://alacritty.org/) : terminal emulator, forked from kitty 
+- [Kitty](https://sw.kovidgoyal.net/kitty/) : terminal emulator used for Hyprland
 - [Neovim](https://neovim.io/) : text editor (plugins included)
 - [Btop](https://github.com/aristocratos/btop) : terminal based resources monitor
 - [Neofetch](https://github.com/dylanaraps/neofetch) : command-line system information tool

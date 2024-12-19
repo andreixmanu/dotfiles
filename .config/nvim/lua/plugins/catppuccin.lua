@@ -1,7 +1,7 @@
 return
-{ 
-    "catppuccin/nvim", 
-    name = "catppuccin", 
+{
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     config = function()
         require('catppuccin').setup({
@@ -10,7 +10,7 @@ return
                 light = "latte",
                 dark = "mocha",
             },
-            transparent_background = false,
+            transparent_background = true,
             term_colors = true,
             styles = {
                 comments = { "italic" },

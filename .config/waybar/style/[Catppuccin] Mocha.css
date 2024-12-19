@@ -3,14 +3,14 @@
 
 * {
 	font-family: "JetBrainsMono Nerd Font";
-	font-weight: bold;
+	font-weight: normal;
 	min-height: 0;
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
 	font-size: 100%;
 	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
-@import "../waybar/style/catppuccin-themes/mocha.css";
+@import "../waybar/style/[Colored] Chroma Glow.css";
 
 window#waybar {
   	transition-property: background-color;

@@ -5,7 +5,7 @@
 {
 "include": "~/.config/waybar/modules",
 "layer": "top",
-// "mode": "dock",
+"mode": "dock",
 "exclusive": true,
 "height": 40,
 "passthrough": false,

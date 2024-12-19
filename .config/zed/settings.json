@@ -7,27 +7,35 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4"
+    "assistant": {
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4"
+        },
+        "version": "2"
     },
-    "version": "2"
-  },
-  "vim_mode": false,
-  "tab_size": 4,
-  "base_keymap": "JetBrains",
-  "theme": "Catppuccin Mocha",
-  "ui_font_size": 16,
-  "ui_font_family": "SF Mono",
-  "buffer_font_size": 16,
-  "buffer_font_family": "SF Mono",
-  "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": false
-  },
-  "tabs": {
-    "close_position": "right",
-    "git_status": true
-  }
+    "vim_mode": false,
+    "tab_size": 4,
+    "base_keymap": "JetBrains",
+    "theme": "BlackFox",
+    "ui_font_size": 16,
+    "ui_font_family": "SF Mono",
+    "buffer_font_size": 16,
+    "buffer_font_family": "SF Mono",
+    "tab_bar": {
+        "show": true,
+        "show_nav_history_buttons": false
+    },
+    "tabs": {
+        "close_position": "right",
+        "git_status": true
+    },
+    "languages": {
+        "C++": {
+            "format_on_save": "language_server"
+        }
+    },
+    "ui_font_features": {
+        "calt": false
+    }
 }

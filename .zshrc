@@ -115,6 +115,7 @@ alias sium="sudo pacman -Syu && yay -Syu"
 alias n="nvim"
 alias install="sudo pacman -S"
 alias docker login="sudo docker login"
+alias shut="shutdown now"
 # neofetch
 # nerdfetch -c
 # tmux attach
@@ -143,3 +144,19 @@ export PATH=$HOME/.local/bin:$PATH
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 . "/home/andreixmanu/.deno/env"
+
+# pnpm
+export PNPM_HOME="/home/andreixmanu/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export LANG=en_US.utf8
+# export LC_ALL=en_US.utf8
+export LANG=en_US.UTF-8
+

@@ -67,7 +67,7 @@ fi
 packages_basic=(neovim tmux zsh curl stow rust neofetch curl btop kitty alacritty)
 packages_hypr=(neovim tmux zsh curl stow rust neofetch curl btop alacritty kitty hypr rofi waybar)
 
-echo "Are you using Hyperland desktop environment? (Y/n)"
+echo "Are you using Hyprland desktop environment? (Y/n)"
 read -r response
 
 # install the necessary packages based on the user's distro
