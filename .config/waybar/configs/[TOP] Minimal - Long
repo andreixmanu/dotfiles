@@ -19,10 +19,10 @@
 
 "modules-left": [
 	"custom/menu",
-	"custom/separator#line", 
+	"custom/separator#line",
     "group/motherboard",
     "custom/separator#line",
-	"hyprland/workspaces#pacman",
+	"hyprland/workspaces",
 	"mpris",
 	"tray",
 	],

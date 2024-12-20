@@ -1,7 +1,6 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 /* Rose Pine */
 
-
 @define-color bar-bg rgba(0, 0, 0, 0);
 @define-color main-bg #26233a;
 @define-color main-fg #ebbcba;
@@ -11,12 +10,12 @@
 @define-color wb-hvr-fg #f6c177;
 
 * {
-	font-family: "JetBrainsMono Nerd Font";
-	font-weight: bold;
-	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 97%;
-	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-	border-radius: 12px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+    font-size: 100%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    border-radius: 12px;
 }
 
 window#waybar {
@@ -39,18 +38,18 @@ tooltip {
 
 #workspaces button {
     box-shadow: none;
-	text-shadow: none;
+    text-shadow: none;
     padding: 0px;
-	border-bottom: 2px;
-	border-color: #2B5D34;
-	border-style: solid;
-	border-radius: 10px;
+    border-bottom: 2px;
+    border-color: #2b5d34;
+    border-style: solid;
+    border-radius: 10px;
     padding-left: 2px;
     padding-right: 4px;
-	background: @main-bg;
+    background: @main-bg;
     color: @main-fg;
     animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button.active {
@@ -59,7 +58,7 @@ tooltip {
     padding-left: 2px;
     padding-right: 4px;
     animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button:hover {
@@ -68,22 +67,22 @@ tooltip {
     padding-left: 2px;
     padding-right: 2px;
     animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button {
     box-shadow: none;
-	text-shadow: none;
+    text-shadow: none;
     padding: 0px;
-	border-bottom: 2px;
-	border-color: #2B5D34;
-	border-style: solid;
-	border-radius: 10px;
+    border-bottom: 2px;
+    border-color: #2b5d34;
+    border-style: solid;
+    border-radius: 10px;
     padding-left: 3px;
     padding-right: 3px;
     color: @wb-color;
     animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button.active {
@@ -92,7 +91,7 @@ tooltip {
     padding-left: 8px;
     padding-right: 8px;
     animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button:hover {
@@ -101,7 +100,7 @@ tooltip {
     padding-left: 3px;
     padding-right: 3px;
     animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #backlight,
@@ -141,7 +140,7 @@ tooltip {
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,
@@ -151,28 +150,28 @@ tooltip {
     color: @main-fg;
     background: @main-bg;
     opacity: 1;
-	border-bottom: 2px;
-	border-color: #2B5D34;
-	border-style: solid;
-	border-radius: 10px;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-right: 6px;
-	padding-left: 6px;
+    border-bottom: 2px;
+    border-color: #2b5d34;
+    border-style: solid;
+    border-radius: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 6px;
+    padding-left: 6px;
 }
 
 #temperature.critical {
-  	background-color: red;
+    background-color: red;
 }
 
 #backlight {
-	padding-right: 2px;
+    padding-right: 2px;
 }
 #network {
-	padding-right: 12px;
+    padding-right: 12px;
 }
 #custom-power {
-	padding-right: 1px;
+    padding-right: 1px;
 }
 #group-motherboard,
 #group-laptop,
@@ -182,41 +181,41 @@ tooltip {
 }
 
 #pulseaudio-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
 }
 
 #pulseaudio-slider trough {
-	min-width: 80px;
-	min-height: 5px;
-	border-radius: 5px;
+    min-width: 80px;
+    min-height: 5px;
+    border-radius: 5px;
 }
 
 #pulseaudio-slider highlight {
-	min-height: 10px;
-	border-radius: 5px;
+    min-height: 10px;
+    border-radius: 5px;
 }
 
 #backlight-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
 }
 
 #backlight-slider trough {
-	min-width: 80px;
-	min-height: 10px;
-	border-radius: 5px;
+    min-width: 80px;
+    min-height: 10px;
+    border-radius: 5px;
 }
 
 #backlight-slider highlight {
-	min-width: 10px;
-	border-radius: 5px;
+    min-width: 10px;
+    border-radius: 5px;
 }

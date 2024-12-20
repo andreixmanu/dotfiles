@@ -17,7 +17,7 @@
     "vim_mode": false,
     "tab_size": 4,
     "base_keymap": "JetBrains",
-    "theme": "BlackFox",
+    "theme": "JetBrains New Dark",
     "ui_font_size": 16,
     "ui_font_family": "SF Mono",
     "buffer_font_size": 16,

@@ -2,7 +2,8 @@ configuration {
     display-drun: "Applications:";
     display-window: "Windows:";
     drun-display-format: "{icon} {name}";
-    font: "JetBrainsMono Nerd Font Medium 10";
+    // font: "JetBrainsMono Nerd Font Medium 10";
+    font: "SF Mono Bold 10";
     modi: "window,run,drun";
     show-icons: true;
 }
@@ -11,14 +12,16 @@ configuration {
 
 * {
 
-    bg: #11121D;
-    bg-alt: #444b6a;
+    // bg: #11121D;
+    //bg-alt: #444b6a;
+    bg-alt: #6b6b6b;
+    bg: #383838;
 
     fg: #FFFFFF;
     fg-alt: #787c99;
 
     background-color: @bg;
-
+    
     border: 0;
     margin: 0;
     padding: 0;
@@ -28,6 +31,7 @@ configuration {
 
 window {
     width: 45%;
+    border-radius : 10;
 }
 
 element {
