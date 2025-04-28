@@ -116,6 +116,9 @@ alias n="nvim"
 alias install="sudo pacman -S"
 alias docker login="sudo docker login"
 alias shut="shutdown now"
+alias ll="ls -l"
+alias lz="lazygit"
+alias lzd="lazydocker"
 # neofetch
 # nerdfetch -c
 # tmux attach
@@ -127,8 +130,11 @@ eval "$(starship init zsh)"
 
 export PATH=$PATH:/home/andreixmanu/.spicetify
 export PATH="$HOME/.deno/bin:$PATH"
-export ANDROID_HOME=$HOME/Android/Sdk
-# export STARSHIP_CONFIG=/home/andreixmanu/.config/starship/starship.toml
+export ANDROID_HOME=/home/andreixmanu/Android/Sdk
+export STARSHIP_CONFIG=/home/andreixmanu/.config/starship/starship.toml
+
+# export my scripts
+export PATH="$PATH:$HOME/dev/scripts"
 
 # Set up fzf
 source <(fzf --zsh)
@@ -156,7 +162,6 @@ esac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export LANG=en_US.utf8
-# export LC_ALL=en_US.utf8
-export LANG=en_US.UTF-8
 
+export LANG=en_US.UTF-8␍
+export LC_ALL=en_US.UTF-8

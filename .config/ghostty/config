@@ -1,0 +1,18 @@
+
+# themes
+theme = deep
+# theme = UltraDark
+background-opacity = 0.90
+background-blur-radius = 95
+
+# font
+font-size = 14
+font-family = FiraCode Nerd Font
+# font-family = JetBrainsMono Nerd Font
+
+# keybindings
+keybind = ctrl+r=reload_config
+
+# miscellaneous
+mouse-hide-while-typing = true
+window-decoration = false

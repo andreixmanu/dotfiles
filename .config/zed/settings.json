@@ -7,17 +7,29 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+    "edit_predictions": {
+        "mode": "subtle",
+        "copilot": {
+            "proxy": null,
+            "proxy_no_verify": null
+        },
+        "enabled_in_assistant": false
+    },
+    "features": {
+        "edit_prediction_provider": "zed"
+    },
+    "icon_theme": "Colored Zed Icons Theme Dark",
     "assistant": {
         "default_model": {
             "provider": "copilot_chat",
-            "model": "gpt-4"
+            "model": "gpt-4o"
         },
         "version": "2"
     },
     "vim_mode": false,
-    "tab_size": 4,
+    "tab_size": 2,
     "base_keymap": "JetBrains",
-    "theme": "JetBrains New Dark",
+    "theme": "BlackFox",
     "ui_font_size": 16,
     "ui_font_family": "SF Mono",
     "buffer_font_size": 16,
